@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHOTO GALARY</title>
+  <link rel="stylesheet" href="photogalarystyle.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+   
+  <!-- Header -->
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <h2 class="logo">StudioNova</h2>
+      <nav class="navigation">
+        <a href="main.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="dropdown1">
+        <a href="#" class="dropbtn1">Services</a>
+        <div class="dropdown-content1">
+          <a href="photogalary.html"><ion-icon name="images-outline"></ion-icon> Photo Gallery</a>
+        </div>
+      </div>
+        <div class="dropdown">
+        <a href="#" class="dropbtn" id="profileBtn">
+          <span class="avatar-icon"><i class="fas fa-user"></i></span> Profile
+        </a>
+        <div class="dropdown-content" id="accountDropdown">
+          <ul class="dropdown-menu">
+            <li><a href="myacc.html"><i class="fas fa-user"></i> My Account</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li class="separator"></li>
+            <li class="dark-mode-toggle">
+              <a href="#"><i class="fas fa-moon"></i> Dark Mode</a>
+              <label class="switch">
+                <input type="checkbox" id="darkModeToggle" />
+                <span class="slider round"></span>
+              </label>
+            </li>
+            <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="gallery">
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig1.jpg" alt="Nature Scene" />
+        <div class="description">
+          <h3>Nature Escape</h3> 
+          <p>Peaceful view during sunrise.</p>
+          <a href="image/fig1.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig1.jpg" download>⬇</a>
+          <button onclick="sharePhoto('nature (1).jpeg')">🔗</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Duplicate and change details for other cards -->
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig2.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>City Nights</h3>
+          <p>City skyline glowing under the stars.</p>
+          <a href="image/fig2.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig2.jpg" download>⬇</a>
+          <button onclick="sharePhoto('nature (2).jpeg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig3.jpg" alt="Bridal look" />
+        <div class="description">
+          <h3>Bridal look</h3>
+          <p>"Wearing a saree is like flaunting a timeless art."</p>
+          <a href="image/fig3.jpg" targ et="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig3.jpg" download>⬇</a>
+          <button onclick="sharePhoto('s(3).jpg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig4.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>City Nights</h3>
+          <p>City skyline glowing under the stars.</p>
+          <a href="image/fig4.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig4.jpg" download>⬇</a>
+          <button onclick="sharePhoto('nature (6).jpeg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig2.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>City Nights</h3>
+          <p>City skyline glowing under the stars.</p>
+          <a href="image/fig2.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig2.jpg" download>⬇</a>
+          <button onclick="sharePhoto('nature (8).jpeg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig6.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>City Nights</h3>
+          <p>City skyline glowing under the stars.</p>
+          <a href="image/fig6.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig6.jpg" download>⬇</a>
+          <button onclick="sharePhoto('bck 2.jpg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig7.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>Saree</h3>
+          <p>"A saree never tells you to fit in. It makes you stand out."</p>
+          <a href="image/fig7.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig7.jpg" download>⬇</a>
+          <button onclick="sharePhoto(' s(4).jpg')">🔗</button>
+        </div>
+      </div>
+    </div>
+     <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig8.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>Stylish Dress</h3>
+          <p>"Elegance is when the inside is as beautiful as the outside."</p>
+          <a href="image/fig8.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig8.jpg" download>⬇</a>
+          <button onclick="sharePhoto('f (1).jpeg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig9.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>Stylish Dress</h3>
+          <p>"Elegance is when the inside is as beautiful as the outside."</p>
+          <a href="image/fig9.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig9.jpg" download>⬇</a>
+          <button onclick="sharePhoto('f (3).jpeg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig10.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>Traditional saree</h3>
+          <p>"No outfit is as powerful as a saree with a confident smile."</p>
+          <a href="image/fig10.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig10.jpg" download>⬇</a>
+          <button onclick="sharePhoto('s(50).jpg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig11.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>Blossom flower</h3>
+          <p>"Blossom by blossom, spring begins."Algernon Charles Swinburne</p>
+          <a href="image/fig11.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig11.jpg" download>⬇</a>
+          <button onclick="sharePhoto('nature (7).jpeg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig12.jpg" alt="Meoww" />
+        <div class="description">
+          <h3>Meowww</h3>
+          <p>"A pretty love of mother cat ." Algernon Charles Swinburne</p>
+          <a href="image/fig12.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig12.jpg" download>⬇</a>
+          <button onclick="sharePhoto('cat.jpg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig13.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>Saree</h3>
+          <p>"Saree: A six-yard story of grace."</p>
+          <a href="image/fig13.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig13.jpg" download>⬇</a>
+          <button onclick="sharePhoto('s (1).jpeg')">🔗</button>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-card-container">
+        <img src="image/fig2.jpg" alt="City Lights" />
+        <div class="description">
+          <h3>Way of pleats </h3>
+          <p>"Elegance is the only beauty that never fades, especially in a saree."</p>
+          <a href="image/fig2.jpg" target="_blank">View Full Image</a>
+        </div>
+        <div class="action-buttons">
+          <button onclick="likePhoto(this)">👍 <span>0</span></button>
+          <button onclick="dislikePhoto(this)">👎 <span>0</span></button>
+          <a href="image/fig2.jpg" download>⬇</a>
+          <button onclick="sharePhoto('s (2).jpeg')">🔗</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    function likePhoto(btn) {
+      let count = btn.querySelector("span");
+      count.innerText = parseInt(count.innerText) + 1;
+    }
+
+    function dislikePhoto(btn) {
+      let count = btn.querySelector("span");
+      count.innerText = parseInt(count.innerText) + 1;
+    }
+
+    function sharePhoto(imageUrl) {
+      const fullURL = window.location.origin + "/" + imageUrl;
+      navigator.clipboard.writeText(fullURL);
+      alert("Image link copied to clipboard: " + fullURL);
+    }
+  </script>
+  <footer class="page-footer">
+  <p>© 2025 My Photo Gallery. All rights reserved.</p>
+</footer>
+</body>
+</html> 

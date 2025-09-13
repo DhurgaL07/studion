@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contactstyle.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+    <h2 class="logo">StudioNova</h2>
+    <nav class="navigation">
+      <a href="main.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+
+      <div class="dropdown1">
+        <a href="#" class="dropbtn1">Services</a>
+        <div class="dropdown-content1">
+          <a href="photogalary.html"><ion-icon name="images-outline"></ion-icon> Photo Gallery</a>
+          <a href="mytube.html"><ion-icon name="videocam-outline"></ion-icon> My Tube</a>
+          <a href="pricetable.html"><ion-icon name="card-outline"></ion-icon> Price Table</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn" id="profileBtn">
+          <span class="avatar-icon"><i class="fas fa-user"></i></span>
+          Profile
+        </a>
+        <div class="dropdown-content" id="accountDropdown">
+          <ul class="dropdown-menu">
+            <li class="has-submenu">
+              <div class="submenu" id="accountDetails">
+                <p><strong>Name:</strong> Dhurga /l</p>
+                <p><strong>Title:</strong> Web Designer</p>
+                <p><strong>Email:</strong> dhurgavarshin222@gmail.com</p>
+                <p><strong>Status:</strong> PRO User</p>
+              </div>
+              <a href="#" id="myAccountLink"><i class="fas fa-user"></i> My Account</a>
+            </li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li class="separator"></li>
+            <li class="dark-mode-toggle">
+              <div class="dark-mode-wrapper">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+                <label class="switch">
+                  <input type="checkbox" id="darkModeToggle" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </li>
+
+            <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </header>
+
+  <section class="contact-container">
+    <div class="contact_us">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you. Get in touch with us!</p>
+    </div>
+    <div class="contact-info">
+      <h2>Our Office</h2>
+      <p><strong>Address:</strong> 123 Innovation Street, Tech City, TX 75001</p>
+      <p><strong>Email:</strong> contact@ourcompany.com</p>
+      <p><strong>Phone:</strong> +1 (800) 123-4567</p>
+      <p><strong>Office Hours:</strong> Mon - Fri: 9:00 AM - 6:00 PM</p>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="https://formsubmit.co/mare85113@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Our Company. All rights reserved.
+  </footer>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>

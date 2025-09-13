@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account - StudioNova</title>
+  <link rel="stylesheet" href="myacc.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+
+    <header>
+  <div class="header-inner">
+    <h2 class="logo">StudioNova</h2>
+    <nav class="navigation">
+      <a href="main.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+
+      <div class="dropdown1">
+        <a href="#" class="dropbtn1">Services</a>
+        <div class="dropdown-content1">
+          <a href="photogalary.html"><ion-icon name="images-outline"></ion-icon> Photo Gallery</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn" id="profileBtn">
+          <span class="avatar-icon"><i class="fas fa-user"></i></span>
+          Profile
+        </a>
+        <div class="dropdown-content" id="accountDropdown">
+          <ul class="dropdown-menu">
+            <li class="has-submenu">
+              <div class="submenu" id="accountDetails">
+                <p><strong>Name:</strong> Dhurga L</p>
+                <p><strong>Title:</strong> Web Designer</p>
+                <p><strong>Email:</strong> dhurgavarshin22@gmail.com</p>
+                <p><strong>Status:</strong> PRO User</p>
+              </div>
+              <a href="#" id="myAccountLink"><i class="fas fa-user"></i> My Account</a>
+            </li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li class="separator"></li>
+            <li class="dark-mode-toggle">
+              <a href="darkmood.html"><i class="fas fa-moon"></i> Dark Mode</a>
+              <label class="switch">
+                <input type="checkbox" id="darkModeToggle" />
+                <span class="slider round"></span>
+              </label>
+            </li>
+            <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="account-section">
+    <h2>My Account</h2>
+
+    <!-- Profile Picture Section -->
+    <div class="profile-photo-section">
+      <img src="krish.jpg" alt="Profile Photo" class="profile-photo" />
+      <label for="upload-photo" class="upload-btn">Change Photo</label>
+      <input type="file" id="upload-photo" style="display: none;" />
+    </div>
+
+    <!-- Account Info -->
+    <div class="account-info">
+      <p><strong>Name:</strong> chalse vijinse M A</p>
+      <p><strong>Title:</strong> Product Designer</p>
+      <p><strong>Email:</strong> chalsevijinsealphonse@gmail.com</p>
+      <p><strong>Status:</strong> <span class="pro-user">PRO User</span></p>
+    </div>
+
+    <!-- Subscription Upgrade -->
+    <div class="subscription-upgrade">
+      <h3>Upgrade Plan</h3>
+      <p>You're currently on the <strong>PRO</strong> plan. Want more features?</p>
+      <a href="pricetable.html" class="upgrade-btn">View Plans</a>
+    </div>
+
+    <!-- Password Change Form -->
+    <div class="password-change">
+      <h3>Change Password</h3>
+      <form>
+        <input type="password" placeholder="Current Password" required />
+        <input type="password" placeholder="New Password" required />
+        <input type="password" placeholder="Confirm New Password" required />
+        <button type="submit">Update Password</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 StudioNova. All rights reserved.</p>
+  </footer>
+  <script>
+  // Live image preview for profile photo upload
+  const uploadPhoto = document.getElementById('upload-photo');
+  const profileImg = document.querySelector('.profile-photo');
+
+  uploadPhoto.addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        profileImg.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Password validation
+  const passwordForm = document.querySelector('.password-change form');
+
+  passwordForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const currentPassword = this.elements[0].value.trim();
+    const newPassword = this.elements[1].value.trim();
+    const confirmPassword = this.elements[2].value.trim();
+
+    if (newPassword.length < 6) {
+      alert('New password must be at least 6 characters long.');
+      return;
+    }
+
+    if (newPassword !== confirmPassword) {
+      alert('New password and confirmation do not match.');
+      return;
+    }
+
+    // Simulated success
+    alert('Password updated successfully!');
+    this.reset();
+  });
+
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
+</body>
+</html>

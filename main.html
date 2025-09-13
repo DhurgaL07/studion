@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Page - StudioNova</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+</head>
+<body>
+
+  <header>
+
+    <h2 class="logo">StudioNova</h2>
+    <nav class="navigation">
+      <a href="main.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+
+      <div class="dropdown1">
+        <a href="#" class="dropbtn1">Services</a>
+        <div class="dropdown-content1">
+          <a href="photogalary.html"><ion-icon name="images-outline"></ion-icon> Photo Gallery</a>
+        </div>
+      </div>
+
+      <!-- Profile dropdown -->
+      <div class="dropdown">
+        <a href="#" class="dropbtn" id="profileBtn">
+          <span class="avatar-icon"><i class="fas fa-user"></i></span> Profile
+        </a>
+        <div class="dropdown-content" id="accountDropdown">
+          <ul class="dropdown-menu">
+            <li><a href="myacc.html"><i class="fas fa-user"></i> My Account</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li class="separator"></li>
+            <li class="dark-mode-toggle">
+              <a href="#"><i class="fas fa-moon"></i> Dark Mode</a>
+              <label class="switch">
+                <input type="checkbox" id="darkModeToggle" />
+                <span class="slider round"></span>
+              </label>
+            </li>
+            <li><a href="login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- StudioNova Description Section -->
+  <section class="about">
+    <h2>Welcome to StudioNova</h2>
+    <p>
+      StudioNova is your creative destination to explore beautiful photo galleries, watch trending videos on MyTube, and unlock exclusive features with our special subscriptions. Join us and elevate your creative journey!
+    </p>
+  </section>
+
+  <!-- Ionicons -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+
+  <!-- JavaScript -->
+  <script>
+    const profileBtn = document.getElementById('profileBtn');
+    const accountDropdown = document.getElementById('accountDropdown');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+
+    profileBtn.addEventListener('click', function (event) {
+      event.preventDefault();
+      accountDropdown.classList.toggle('show');
+    });
+
+    window.addEventListener('click', function (event) {
+      if (!profileBtn.contains(event.target) && !accountDropdown.contains(event.target)) {
+        accountDropdown.classList.remove('show');
+      }
+    });
+
+    darkModeToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+    });
+  </script>
+</body>
+</html>
